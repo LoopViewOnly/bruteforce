@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" href="../favicon.jpg" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>المستوى 1</title>
+    <style>
+      body {
+        direction: rtl;
+      }
+    </style>
+  </head>
+  <body dir="rtl">
+    <main class="px-14 sm:px-20 flex flex-col items-center justify-center">
+      <select
+        class="absolute bottom-10 left-10 bg-slate-600 rounded-md px-4 py-2"
+        id="language"
+        onchange="changeLanguage(this.value)"
+      >
+        <option value="ar">العربية</option>
+        <option value="">English</option>
+        <option value="es">Español</option>
+      </select>
+      <div class="outer-logo">
+        <figure class="w-80">
+          <img src="../images/loop.png" alt="شعار لوب" />
+        </figure>
+      </div>
+      <div
+        class="flex sm:items-center justify-between sm:justify-center relative w-full max-w-[900px] sm:gap-20 gap-6"
+      >
+        <h2
+          class="text-xl md:text-3xl sm:absolute right-0 font-medium sm:font-semibold"
+        >
+          المحاولات: <span id="attempts">0</span>
+        </h2>
+        <div class="inner-logo">
+          <figure class="w-72 hidden md:flex">
+            <img src="../images/loop.png" alt="شعار لوب" />
+          </figure>
+        </div>
+        <h2
+          class="text-xl md:text-3xl sm:font-semibold font-medium sm:absolute left-0"
+        >
+          المؤقت: <span id="timer">00:00:0</span>
+        </h2>
+      </div>
+      <div id="main_div" class="flex flex-col w-full items-center justify-center">
+      <h1
+        id="level-title"
+        class="my-10 text-3xl sm:text-6xl font-extrabold rounded-sm bg-[#9ACD32] px-8 py-4"
+      >
+        المستوى: <span id="level">1</span>
+      </h1>
+      <p class="text-xl sm:text-3xl font-light">
+        كلمة المرور مكونة من
+        <span class="font-semibold" id="digits">2</span> أرقام ← 0, 1, 2
+      </p>
+      <form id="answerForm" class="w-full sm:w-1/2">
+        <input
+          type="password"
+          class="mt-4 py-3 w-full px-2 rounded-sm text-black focus:outline-none"
+          placeholder="أدخل كلمة المرور"
+          id="input"
+          dir="ltr"
+          minlength="2"
+          maxlength="2"
+        />
+        <button
+          class="bg-[#9ACD32] disabled:bg-slate-500 disabled:text-slate-700 px-6 py-1 rounded-sm mt-4 w-full text-2xl font-semibold"
+          id="button"
+          type="submit"
+        >
+          اخترق
+        </button>
+      </form>
+      <h1 id="successMessage" class="success-message text-4xl sm:text-6xl">
+        تم اختراق كلمة المرور!
+      </h1>
+    </div>
+    </main>
+    <script src="../script.js"></script>
+    <script src="../animation.js"></script>
+  </body>
+</html>

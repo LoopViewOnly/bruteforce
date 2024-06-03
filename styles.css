@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(36, 36, 36);
+  color: #fff;
+  font-family: "IBM Plex Mono", "Inter", "Cairo", system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/caret-down.svg")
+    no-repeat right;
+  background-size: 16px 16px;
+  padding-right: 24px; /* Adjust based on icon width */
+}
+
+input.shake {
+  animation: shake 0.5s;
+}
+.success-message {
+  display: none;
+  color: rgb(18, 222, 18);
+  margin-top: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.success-message.show {
+  display: block;
+  animation: scaleUp 1s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.outer-logo {
+  display: none;
+}
+.inner-logo {
+  display: flex;
+}
+
+@media screen and (max-width: 868px) {
+  .outer-logo {
+    display: flex;
+  }
+  .inner-logo {
+    display: none;
+  }
+}
+
+#winnerImg{
+  display: none;
+  width: 65%;
+}

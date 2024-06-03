@@ -124,8 +124,8 @@ answerForm.addEventListener('submit',startSolve);
 const changeLanguage = (lang) => {
   if (lang && location.pathname.includes(lang)) return;
   if (lang === "") {
-    location.href = "bruteforce/";
+    location.href = "/bruteforce";
   } else {
-    location.href = `bruteforce/${lang}`;
+    location.href = `/bruteforce/${lang}`;
   }
 };
